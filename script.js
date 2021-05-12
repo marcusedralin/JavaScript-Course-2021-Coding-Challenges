@@ -23,32 +23,32 @@ m tall
 
 // TEST DATA 1 //
 // Marks BMI 
-const mark1 = {
-    weight: 78,
-    height: 1.69
-}
+// const mark1 = {
+//     weight: 78,
+//     height: 1.69
+// }
 
-const markBMI1 = mark1.weight / mark1.height ** 2;
-console.log(`Test 1 Marks BMI is: ${markBMI1}`);
+// const markBMI1 = mark1.weight / mark1.height ** 2;
+// console.log(`Test 1 Marks BMI is: ${markBMI1}`);
 
-// Johns BMI
-const john1 = {
-    weight: 92,
-    height: 1.95
-}
+// // Johns BMI
+// const john1 = {
+//     weight: 92,
+//     height: 1.95
+// }
 
-const johnBMI1 = john1.weight / john1.height ** 2;
-console.log(`Test 1 Johns BMI is: ${johnBMI1}`);
+// const johnBMI1 = john1.weight / john1.height ** 2;
+// console.log(`Test 1 Johns BMI is: ${johnBMI1}`);
 
-const higherBMI1 = () => {
-    if (markBMI1 > johnBMI1) {
-        console.log('Mark has a higher BMI');
-    } else {
-        console.log('John has a higher BMI');
-    }
-};
+// const higherBMI1 = () => {
+//     if (markBMI1 > johnBMI1) {
+//         console.log('Mark has a higher BMI');
+//     } else {
+//         console.log('John has a higher BMI');
+//     }
+// };
 
-higherBMI1();
+// higherBMI1();
 // shows that mark has a higher bmi when comparing mark1 and john 1
 // TEST DATA 1 //
 
@@ -68,34 +68,34 @@ Hint: Use an if/else statement �
 */
 
 // TEST DATA 2 //
-const mark2 = {
-    weight: 95,
-    height: 1.88
-}
+// const mark2 = {
+//     weight: 95,
+//     height: 1.88
+// }
 
-const markBMI2 = mark2.weight / mark2.height ** 2;
-console.log(`Test 2 Marks BMI is: ${markBMI2}`);
+// const markBMI2 = mark2.weight / mark2.height ** 2;
+// console.log(`Test 2 Marks BMI is: ${markBMI2}`);
 
-const john2 = {
-    weight: 85,
-    height: 1.76
-}
+// const john2 = {
+//     weight: 85,
+//     height: 1.76
+// }
 
-const johnBMI2 = john2.weight / john2.height ** 2;
-console.log(`Test 2 Johns BMI is: ${johnBMI2}`);
+// const johnBMI2 = john2.weight / john2.height ** 2;
+// console.log(`Test 2 Johns BMI is: ${johnBMI2}`);
 
-const lessCodeBmi = (markBmi, johnBmi) => {
-    if (markBmi > johnBmi) {
-        console.log(`Marks BMI (${markBmi}) is higher than Johns.`);
-    } else {
-        console.log(`Johns BMI (${johnBmi}) is higher than Marks.`);
-    }
-};
+// const lessCodeBmi = (markBmi, johnBmi) => {
+//     if (markBmi > johnBmi) {
+//         console.log(`Marks BMI (${markBmi}) is higher than Johns.`);
+//     } else {
+//         console.log(`Johns BMI (${johnBmi}) is higher than Marks.`);
+//     }
+// };
 
-lessCodeBmi(markBMI2, johnBMI2);
-console.log('Test data 2')
-lessCodeBmi(markBMI1, johnBMI1);
-console.log('Test data 1')
+// lessCodeBmi(markBMI2, johnBMI2);
+// console.log('Test data 2')
+// lessCodeBmi(markBMI1, johnBMI1);
+// console.log('Test data 1')
 // This version I made a function that takes in two arguments so you can do the same thing twice nullifying the purpose of the previous bmi test.
 
 // Coding Challenge #3 //
@@ -195,8 +195,70 @@ Hints:
 § To calculate 20% of a value, simply multiply it by 20/100 = 0.2
 § Value X is between 50 and 300, if it's >= 50 && <= 300 �
 */
-const bill = 430;
-const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const bill = 430;
+// const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
-console.log(`The bill is: $${bill}, the tip was: $${tip} and the total was: $${bill + tip}`);
+// console.log(`The bill is: $${bill}, the tip was: $${tip} and the total was: $${bill + tip}`);
+
+// JS Fundamentals Part 2 //
+// Coding Challenges //
+
+// Coding Challenge #1 //
+
+/*
+Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently.
+Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
+A team only wins if it has at least double the average score of the other team. Otherwise, no team wins!
+
+Your tasks:
+
+1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
+
+2. Use the function to calculate the average for both teams
+
+3. Create a function 'checkWinner' that takes the average score of each team 
+as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner 
+to the console, together with the victory points, according to the rule above. 
+Example: "Koalas win (30 vs. 13)"
+
+4. Use the 'checkWinner' function to determine the winner for both Data 1 and Data 2
+
+5. Ignore draws this time
+
+Test data:
+§ Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
+§ Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+
+Hints:
+§ To calculate average of 3 values, add them all together and divide by 3
+§ To check if number A is at least double number B, check for A >= 2 * B. 
+Apply this to the team's average scores
+*/
+
+function addScores(a, b, c) {
+    const totalScores = a + b + c;
+    return totalScores;
+}
+
+// const dolphinsScores = 44 + 23 + 71;
+const dolphinsScores = addScores(85, 54, 41);
+// const koalasScores = 65 + 54 + 49;
+const koalasScores = addScores(23, 34, 27);
+
+const calcAverage = (scores) => scores / 3;
+
+const dolphAvg = calcAverage(dolphinsScores);
+const koaAvg = calcAverage(koalasScores);
+
+function checkWinner(dolphAvg, koaAvg) {
+    if (dolphAvg >= 2 * koaAvg) {
+        console.log(`Dolphins win (${dolphAvg} vs. ${koaAvg})`);
+    } else if (koaAvg >= 2 * dolphAvg) {
+        console.log(`Koalas win (${koaAvg} vs. ${dolphAvg})`);
+    } else {
+        console.log('No one wins...')
+    }
+}
+
+checkWinner(dolphAvg, koaAvg);
 
